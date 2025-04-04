@@ -1,0 +1,85 @@
+
+.header {
+    background-color: #0a2718;
+    color: #d4af37;
+    padding: 1rem 1.5rem;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo et titre */
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-title {
+    font-size: 1.5rem;
+    font-weight: 250;
+    color: #d4af37;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+  }
+  
+  /* Navigation */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+  
+  /* Icônes à droite */
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: #d4af37;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+  
+  .icon-button:hover {
+    color: white;
+  }
+  
+  .icon-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .header-icons .icon-button:first-child {
+      margin-left: 0;
+    }
+  }
+  
+  
