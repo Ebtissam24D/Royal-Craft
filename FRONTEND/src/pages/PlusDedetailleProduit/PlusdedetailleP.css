@@ -38,6 +38,14 @@
     border-radius: 5px;
     border: 2px solid #ccc;
     cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #4CAF50;
+    /* Vert au survol */
+    transform: scale(1.1);
+    /* Zoom léger */
 }
 
 .product-info {
@@ -90,6 +98,7 @@
     gap: 1rem;
 }
 
+/* Bouton principal (Ajouter au panier) */
 .btn-ajouter {
     background-color: #405b3c;
     color: white;
@@ -97,14 +106,35 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-chat {
-    background-color: #eee;
-    padding: 0.6rem;
-    border-radius: 5px;
+.btn-ajouter:hover {
+    background-color: #1d3818;
+    /* Vert foncé au survol */
+    transform: scale(1.05);
+    /* Zoom léger */
+}
+
+/* Bouton secondaire (Voir plus de recommandations) */
+.btn-secondary {
+    background-color: #f0f0f0;
     border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+    /* Gris plus foncé au survol */
+    transform: scale(1.05);
+    /* Zoom léger */
 }
 
 .client-recommendations h2 {
@@ -132,21 +162,10 @@
     margin-bottom: 1.5rem;
 }
 
-.btn-secondary {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #333;
-    font-weight: 500;
-}
-
 .produit-recommande {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* espace entre les infos et le bouton */
     background-color: #f9f9f9;
     border-radius: 12px;
     padding: 10px;
@@ -158,7 +177,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    /* Espace entre 🛒 et ♥ */
 }
 
 .produit-recommande img {
@@ -182,10 +200,10 @@
 .prix {
     font-weight: bold;
     color: #081106;
-    /* une couleur différente pour attirer l’œil */
     margin: 4px 0 0 0;
 }
 
+/* Bouton panier (🛒) */
 .btn-panier {
     background-color: #415d3c;
     color: white;
@@ -194,11 +212,15 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-panier:hover {
     background-color: #1d3818;
+    /* Vert foncé au survol */
+    transform: scale(1.05);
+    /* Zoom léger */
 }
 
 .user-info {
@@ -229,6 +251,12 @@
     width: fit-content;
     cursor: pointer;
     background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.taille-selection select:hover {
+    border-color: #4CAF50;
+    /* Vert au survol */
 }
 
 .ajout-avis {
@@ -243,8 +271,15 @@
     resize: none;
     margin-bottom: 10px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
+.avis-input:focus {
+    border-color: #4CAF50;
+    /* Vert au focus */
+}
+
+/* Bouton principal (Publier) */
 .btn-primary {
     background-color: #415d3c;
     color: white;
@@ -252,45 +287,39 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #415d3c;
+    background-color: #1d3818;
+    /* Vert foncé au survol */
+    transform: scale(1.05);
+    /* Zoom léger */
 }
-
-.btn-favoris {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 0;
-    transition: color 0.3s ease;
-}
-
-
-
-.recommande-actions {
-    display: flex;
-    gap: 8px;
-}
-
 
 /* Bouton favoris (cœur) */
 .btn-favoris {
     background-color: transparent;
     border: none;
-    font-size: 18px;
+    font-size: 24px;
     color: #999;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-favoris.active {
+    color: #e74c3c;
+    /* Rouge pour indiquer l'état actif */
 }
 
 .btn-favoris:hover {
-    color: #1d3818;
+    color: #e74c3c;
+    /* Rouge au survol */
+    transform: scale(1.2);
+    /* Zoom plus prononcé */
 }
-
-
 
 @media screen and (max-width: 768px) {
 

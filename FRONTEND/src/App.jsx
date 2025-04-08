@@ -1,6 +1,6 @@
-import LayoutArtisan from "./components/layoutArtisan"
+import Layout from "./components/Layout"
 import "./index.css"
-//import HomePage from "./pages/Homepage"
+// import HomePage from "./pages/Homepage"
 // import Products from "./pages/ProduitPage/Products.jsx"
 // import Recommended from "./pages/ProduitPage/Recommended.jsx"
 // import Category from "./pages/ProduitPage/Category.jsx"
@@ -9,25 +9,26 @@ import "./index.css"
 // // import Sidebar from "./pages/ProduitPage/Sidebar.jsx"
 // import "./app.css"; // Ajoute ce fichier pour le layout
 // import Catalogue from "./pages/ProduitPage/Catalogue.jsx"
-// import ProductDisplay from "./pages/PlusDedetailleProduit/Plusdedetaille"
+import PlusdedetailleP from "./pages/PlusDedetailleProduit/Plusdedetaille"
+
 
 
 function App() {
   return (
-    // <Layout>
-    <LayoutArtisan>
+    <Layout>
+      {/* // <LayoutArtisan> */}
       {/* <HomePage /> */}
 
-      {/* <ProductDisplay /> */}
+      <PlusdedetailleP />
       {/* <Catalogue />
-       
-      <Recommended />
-      <Category />
-      <Colors />
-      <Price /> */}
 
-    </LayoutArtisan>
-    // </Layout>
+    // <Recommended />
+    // <Category />
+    // <Colors />
+    // <Price /> */}
+
+      {/* </LayoutArtisan> */}
+    </Layout>
   )
 }
 

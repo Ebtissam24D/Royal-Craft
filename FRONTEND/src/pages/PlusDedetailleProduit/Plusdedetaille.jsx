@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PlusdedetailleP.css";
+import { FaStar, FaHeart } from 'react-icons/fa'; // Import des icônes
 
 // Import des images
 import Tapis1Image from "../../assets/images/Tapis1.png";
@@ -9,26 +10,41 @@ import tapiss3Image from "../../assets/images/tapiss3.png";
 import tapiss4Image from "../../assets/images/tapiss4.png";
 import table_chaiseImage from "../../assets/images/table_chaises.jpg";
 import MirrorImage from "../../assets/images/mirror.jpg";
-import profile1 from "../../assets/images/profile1.png";
-import profile2 from "../../assets/images/profile2.png";
+import profileH from "../../assets/images/profileH.png";
+import profileF from "../../assets/images/profileF.png";
 
 const PlusdedetailleP = () => {
-    const [favori, setFavori] = useState(false);
+    const [favori, setFavori] = useState(false); // État pour le bouton principal
     const [mainImage, setMainImage] = useState(Tapis1Image); // Image principale initiale
     const [thumbnails, setThumbnails] = useState([tapiss1Image, tapiss2Image, tapiss3Image, tapiss4Image]); // Miniatures
 
+    // État pour les cœurs des produits recommandés
+    const [favorisRecommandes, setFavorisRecommandes] = useState({
+        mirror: false,
+        tableChaise: false,
+    });
+
     const toggleFavori = () => {
-        setFavori(!favori);
+        setFavori(!favori); // Inverse l'état du bouton de favoris principal
     };
 
-    // Gestionnaire de clic pour changer l'image principale et déplacer l'ancienne image dans la section des miniatures
+    // Gestionnaire de clic pour changer l'image principale
     const handleThumbnailClick = (image) => {
-        setThumbnails([mainImage, ...thumbnails.filter(img => img !== mainImage)]); // Déplacer l'ancienne image principale parmi les miniatures
+        setThumbnails([mainImage, ...thumbnails.filter(img => img !== mainImage)]); // Déplace l'ancienne image principale parmi les miniatures
         setMainImage(image); // Met à jour l'image principale avec l'image sélectionnée
+    };
+
+    // Gestionnaire de clic pour les cœurs des produits recommandés
+    const toggleFavoriRecommande = (produit) => {
+        setFavorisRecommandes((prevState) => ({
+            ...prevState,
+            [produit]: !prevState[produit], // Inverse l'état du cœur pour le produit spécifié
+        }));
     };
 
     return (
         <div className="product-detail-container">
+            {/* Section principale */}
             <div className="product-main">
                 <div className="product-images">
                     {/* Image principale */}
@@ -49,7 +65,16 @@ const PlusdedetailleP = () => {
 
                 <div className="product-info">
                     <h1>Tapis Berbère Atlas - Édition Spéciale</h1>
-                    <div className="rating">⭐⭐⭐⭐⭐ (4.5/5 - 128 avis)</div>
+                    <div className="rating flex items-center space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                            <FaStar
+                                key={i}
+                                color={i < 4.5 ? "#fbbf24" : "#d1d5db"} // Jaune pour actif, gris pour inactif
+                                size={20} // Taille de l'icône
+                            />
+                        ))}
+                        <span className="ml-2">(5/5 - 128 avis)</span>
+                    </div>
                     <div className="price">899,89 MAD</div>
 
                     <p className="description">
@@ -80,38 +105,70 @@ const PlusdedetailleP = () => {
                         <button className="btn-ajouter">🛒 Ajouter au panier</button>
 
                         <button
-                            className="btn-favoris"
+                            className={`btn-favoris ${favori ? "active" : ""}`}
                             onClick={toggleFavori}
                             title="Ajouter aux favoris"
                         >
-                            <span className={favori ? "heart filled" : "heart"}>♥</span>
+                            <FaHeart
+                                className="heart-icon"
+                                color={favori ? "#e74c3c" : "#d1d5db"} // Rouge foncé pour actif, gris pour inactif
+                                size={24} // Taille de l'icône
+                            />
                         </button>
 
-                        <button className="btn-chat">💬</button>
                     </div>
                 </div>
             </div>
 
+            {/* Section des recommandations */}
             <div className="client-recommendations">
                 <h2>Avis Clients et Recommandations</h2>
 
                 <div className="avis-recommendations">
                     <div className="avis-recent">
                         <h4>Avis Récents</h4>
+
+                        {/* Avis de Pierre Dubois */}
                         <div className="avis">
                             <div className="user-info">
-                                <img src={profile1} alt="Pierre Dubois" className="profile-icon" />
-                                <p><strong>Pierre Dubois</strong> ⭐⭐⭐⭐☆</p>
+                                <img src={profileH} alt="Pierre Dubois" className="profile-icon" />
+                                <p>
+                                    <strong>Pierre Dubois</strong>{" "}
+                                    <span className="flex items-center space-x-1">
+                                        {[...Array(5)].map((_, i) => (
+                                            <FaStar
+                                                key={i}
+                                                color={i < 4 ? "#fbbf24" : "#d1d5db"} // 4 étoiles actives pour Pierre Dubois
+                                                size={20} // Taille de l'icône
+                                            />
+                                        ))}
+                                    </span>
+                                </p>
                             </div>
                             <p>Très satisfait de ma poterie, elle est encore plus belle en vrai que sur les photos.</p>
                         </div>
+
+                        {/* Avis de Sophie Martin */}
                         <div className="avis">
                             <div className="user-info">
-                                <img src={profile2} alt="Sophie Martin" className="profile-icon" />
-                                <p><strong>Sophie Martin</strong> ⭐⭐⭐⭐⭐</p>
+                                <img src={profileF} alt="Sophie Martin" className="profile-icon" />
+                                <p>
+                                    <strong>Sophie Martin</strong>{" "}
+                                    <span className="flex items-center space-x-1">
+                                        {[...Array(5)].map((_, i) => (
+                                            <FaStar
+                                                key={i}
+                                                color={i < 5 ? "#fbbf24" : "#d1d5db"} // 5 étoiles actives pour Sophie Martin
+                                                size={20} // Taille de l'icône
+                                            />
+                                        ))}
+                                    </span>
+                                </p>
                             </div>
                             <p>Magnifique tapis berbère! La qualité est exceptionnelle et les motifs sont authentiques.</p>
                         </div>
+
+                        {/* Ajout d'un avis */}
                         <div className="ajout-avis">
                             <h5>Ajouter votre commentaire</h5>
                             <textarea
@@ -123,9 +180,11 @@ const PlusdedetailleP = () => {
                         </div>
                     </div>
 
+                    {/* Recommandations */}
                     <div className="recommandations">
                         <h4>Recommandations Pour Vous</h4>
 
+                        {/* Produit recommandé : Mirror */}
                         <div className="produit-recommande">
                             <img src={MirrorImage} alt="Mirror" />
 
@@ -136,10 +195,21 @@ const PlusdedetailleP = () => {
 
                             <div className="recommande-actions">
                                 <button className="btn-panier">🛒</button>
-                                <button className="btn-favoris"> ♥ </button>
+                                <button
+                                    className={`btn-favoris ${favorisRecommandes.mirror ? "active" : ""}`}
+                                    onClick={() => toggleFavoriRecommande("mirror")}
+                                    title="Ajouter aux favoris"
+                                >
+                                    <FaHeart
+                                        className="heart-icon"
+                                        color={favorisRecommandes.mirror ? "#e74c3c" : "#d1d5db"}
+                                        size={24}
+                                    />
+                                </button>
                             </div>
                         </div>
 
+                        {/* Produit recommandé : Table & Chaise */}
                         <div className="produit-recommande">
                             <img src={table_chaiseImage} alt="Table & Chaise" />
 
@@ -147,9 +217,20 @@ const PlusdedetailleP = () => {
                                 <p className="titre-produit"><strong>Table & Chaise</strong></p>
                                 <p className="prix"><strong>2 199 MAD</strong></p>
                             </div>
+
                             <div className="recommande-actions">
                                 <button className="btn-panier">🛒</button>
-                                <button className="btn-favoris"> ♥ </button>
+                                <button
+                                    className={`btn-favoris ${favorisRecommandes.tableChaise ? "active" : ""}`}
+                                    onClick={() => toggleFavoriRecommande("tableChaise")}
+                                    title="Ajouter aux favoris"
+                                >
+                                    <FaHeart
+                                        className="heart-icon"
+                                        color={favorisRecommandes.tableChaise ? "#e74c3c" : "#d1d5db"}
+                                        size={24}
+                                    />
+                                </button>
                             </div>
                         </div>
 
