@@ -7,7 +7,7 @@ function Header() {
       <div className="header-container">
         <div className="logo-container">
           <div>
-            <img src={logo} alt="Logo" style={{ width: '34px', height: 'auto',}} />
+            <img src={logo} alt="Logo" style={{ width: '34px', height: 'auto', }} />
           </div>
           <a href="/" className="logo-title">
             Royal Craft
@@ -25,7 +25,7 @@ function Header() {
             Nos Artisans
           </a>
           <a href="/musee" className="nav-link">
-          Musée virtuel
+            Musée virtuel
           </a>
           <a href="/contact" className="nav-link">
             Contact & Support

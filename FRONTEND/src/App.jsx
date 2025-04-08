@@ -1,13 +1,33 @@
-import Layout from "./components/Layout"
+import LayoutArtisan from "./components/layoutArtisan"
 import "./index.css"
-import HomePage from "./pages/Homepage"
+//import HomePage from "./pages/Homepage"
+// import Products from "./pages/ProduitPage/Products.jsx"
+// import Recommended from "./pages/ProduitPage/Recommended.jsx"
+// import Category from "./pages/ProduitPage/Category.jsx"
+// import Colors from "./pages/ProduitPage/Colors.jsx"
+// import Price from "./pages/ProduitPage/Price.jsx"
+// // import Sidebar from "./pages/ProduitPage/Sidebar.jsx"
+// import "./app.css"; // Ajoute ce fichier pour le layout
+// import Catalogue from "./pages/ProduitPage/Catalogue.jsx"
+// import ProductDisplay from "./pages/PlusDedetailleProduit/Plusdedetaille"
+
 
 function App() {
   return (
-    <Layout>
-        <HomePage />
-        {/* Ajoutez d'autres pages ici si nécessaire */}
-    </Layout>
+    // <Layout>
+    <LayoutArtisan>
+      {/* <HomePage /> */}
+
+      {/* <ProductDisplay /> */}
+      {/* <Catalogue />
+       
+      <Recommended />
+      <Category />
+      <Colors />
+      <Price /> */}
+
+    </LayoutArtisan>
+    // </Layout>
   )
 }
 

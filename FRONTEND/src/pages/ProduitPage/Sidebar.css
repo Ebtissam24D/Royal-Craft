@@ -1,0 +1,103 @@
+/* Style global de la sidebar */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+/* Titres des sections */
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Liste des catégories */
+.category-list {
+    list-style: none;
+    /* Supprime les points noirs */
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.category-list label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-list svg {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Filtre de prix */
+.price-filter {
+    margin-top: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.price-filter p {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Liste de composition */
+.composition-list {
+    list-style: none;
+    /* Supprime les points noirs */
+    padding: 0;
+    margin: 0;
+}
+
+.composition-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.composition-list input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Évaluations */
+.ratings {
+    margin-top: 10px;
+}
+
+.star-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.star-filter svg {
+    font-size: 16px;
+}
+
+.star-filter span {
+    font-size: 14px;
+    color: #333;
+}

@@ -1,0 +1,301 @@
+/* PlusdedetailleP.css */
+
+.product-detail-container {
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    background-color: #f9f9f9;
+}
+
+.product-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-images {
+    flex: 1;
+    min-width: 300px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.product-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: #ffa500;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.caracteristiques ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caracteristiques li::before {
+    content: '•';
+    color: #4CAF50;
+    margin-right: 8px;
+}
+
+.taille-selection {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-ajouter {
+    background-color: #405b3c;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-chat {
+    background-color: #eee;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.client-recommendations h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.avis-recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.avis-recents,
+.recommandations {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.avis {
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+}
+
+.produit-recommande {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* espace entre les infos et le bouton */
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommande-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Espace entre 🛒 et ♥ */
+}
+
+.produit-recommande img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.info-recommande {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.titre-produit {
+    font-weight: bold;
+    margin: 0;
+}
+
+.prix {
+    font-weight: bold;
+    color: #081106;
+    /* une couleur différente pour attirer l’œil */
+    margin: 4px 0 0 0;
+}
+
+.btn-panier {
+    background-color: #415d3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-panier:hover {
+    background-color: #1d3818;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.taille-selection {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.taille-selection select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: fit-content;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.ajout-avis {
+    margin-top: 20px;
+}
+
+.avis-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #415d3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #415d3c;
+}
+
+.btn-favoris {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+
+
+.recommande-actions {
+    display: flex;
+    gap: 8px;
+}
+
+
+/* Bouton favoris (cœur) */
+.btn-favoris {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-favoris:hover {
+    color: #1d3818;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .product-main,
+    .avis-recommendations {
+        flex-direction: column;
+    }
+}
