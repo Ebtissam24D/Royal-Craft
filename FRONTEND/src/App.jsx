@@ -1,7 +1,7 @@
 import Layout from "./components/Layout"
 import "./index.css"
 // import InscripForm from "./pages/log"
-// import HomePage from "./pages/Homepage"
+import HomePage from "./pages/Homepage"
 // import SignupForm from "./pages/SignupForm"
 import Logform from "./pages/Logform"
 import Cart from "./pages/Cart"
@@ -12,8 +12,8 @@ function App() {
       {/* <HomePage /> */}
       {/* Ajoutez d'autres pages ici si nécessaire */}
       {/* <SignupForm/> */}
-      <Logform/>
-      {/* <Cart/> */}
+      {/* <Logform/> */}
+      <Cart/>
       
     </Layout>
   )
