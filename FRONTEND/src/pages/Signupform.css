@@ -1,0 +1,262 @@
+.signup-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #E3D9CF;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0e9e0;
+    overflow: hidden;
+  }
+  
+  /* Layout principal */
+  .content-wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    max-height: 700px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Partie gauche avec l'image */
+  .image-section {
+    flex: 1;
+    background: linear-gradient(135deg, #2c4e41 0%, #5c8b7e 50%, #e3a64b 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Partie droite avec le formulaire */
+  .form-section {
+    flex: 1;
+    background: #e9e2d8;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Cercles décoratifs */
+  .circle-top {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    right: -30px;
+    background: #2c4e41;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .circle-bottom {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    bottom: -40px;
+    right: -40px;
+    background: #2c4e41;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Formulaire */
+  .signup-form {
+    position: relative;
+    width: 85%;
+    max-width: 400px;
+    background: rgba(232, 227, 218, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .title {
+    color:#e3a64b;
+
+  }
+  
+  
+  .subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    color: #D4AF37;
+    margin: 5px 0 0;
+    text-align: center;
+  }
+  
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .input-field {
+    position: relative;
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f8f5f0;
+    border: 1px solid #cfcab7;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field input:focus {
+    border-color: #2c4e41;
+  }
+  
+  .input-field input::placeholder {
+    color: #8a8a8a;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #203624, #3a6252);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .signup-button:hover {
+    background: linear-gradient(to right, #1a2e1f, #34584a);
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .divider .line {
+    flex: 1;
+    height: 1px;
+    background: #cfcab7;
+  }
+  
+  .divider .text {
+    margin: 0 15px;
+    color: #8a8a8a;
+    font-size: 14px;
+  }
+  
+  .social-logins {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .social-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #f8f5f0;
+    transition: transform 0.2s;
+  }
+  
+  .social-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .login-redirect {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .login-redirect a {
+    color: #2c4e41;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-redirect a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  
+  .footer-links a {
+    color: #2c4e41;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  /* Image du logo */
+.logo-image {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+/* Icônes sociales (déjà stylées mais tu peux ajouter si besoin) */
+.social-logins {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f8f5f0;
+  transition: transform 0.2s;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
