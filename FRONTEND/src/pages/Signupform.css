@@ -87,7 +87,12 @@
     margin-bottom: 20px;
   }
   .title {
-    color:#e3a64b;
+    font-size: 1.5rem;
+    font-weight: 250;
+    color: #d4af37;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Cinzel', serif;
 
   }
   

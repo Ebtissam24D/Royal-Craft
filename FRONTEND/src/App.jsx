@@ -1,20 +1,26 @@
 import Layout from "./components/Layout"
 import "./index.css"
-// import InscripForm from "./pages/log"
-import HomePage from "./pages/Homepage"
-// import SignupForm from "./pages/SignupForm"
-import Logform from "./pages/Logform"
-import Cart from "./pages/Cart"
+// import HomePage from "./pages/Homepage"
+// import Signupform from "./pages/Signupform"
+// import LoginForm from "./pages/LoginForm"
+// import AvisReclamationsApp from "./pages/avies"
+// import Cart from "./pages/Cart"
+// import ArtisanNotificationPage from "./pages/ArtisanNotificationPage"
+import AdminNotificationPage from "./pages/AdminNotificationPage"
+
 
 function App() {
   return (
     <Layout>
       {/* <HomePage /> */}
-      {/* Ajoutez d'autres pages ici si nécessaire */}
-      {/* <SignupForm/> */}
-      {/* <Logform/> */}
-      <Cart/>
-      
+      {/* <Signupform /> */}
+      {/* <AvisReclamationsApp/> */}
+      {/* <LoginForm /> */}
+      {/* <Cart /> */}
+      {/* <ArtisanNotificationPage /> */}
+      <AdminNotificationPage />
+
+
     </Layout>
   )
 }
