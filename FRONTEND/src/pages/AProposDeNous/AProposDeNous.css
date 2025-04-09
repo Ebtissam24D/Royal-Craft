@@ -1,0 +1,187 @@
+/* AProposDeNous.css */
+
+.apropos-container {
+    font-family: Arial, sans-serif;
+    color: #222;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+.histoire-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 30px;
+}
+
+.histoire-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.histoire-texte {
+    flex: 1;
+    min-width: 300px;
+}
+
+.histoire-texte h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.histoire-texte p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.mission-section {
+    background-color: #f9fdfc;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.mission-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.mission-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.valeurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.valeur {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.valeur-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.valeur h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.valeur p {
+    font-size: 14px;
+    color: #555;
+}
+
+.equipe-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.equipe-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.membres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.membre {
+    text-align: center;
+    max-width: 200px;
+}
+
+.membre img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.membre h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.membre p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.membre span {
+    font-size: 14px;
+    color: #666;
+}
+
+.chiffres-section {
+    text-align: center;
+    background-color: #f9fdfc;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.chiffres-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.chiffres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.chiffre {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: 150px;
+}
+
+.chiffre h3 {
+    font-size: 24px;
+    color: #000;
+}
+
+.chiffre p {
+    font-size: 14px;
+    color: #555;
+}
