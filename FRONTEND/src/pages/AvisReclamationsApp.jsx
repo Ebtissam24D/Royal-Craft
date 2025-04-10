@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, MessageCircle, Check, X, AlertTriangle, Star } from 'lucide-react';
 import './Avies.css'; // Importer le fichier CSS pour le style
+import Layout from '../components/Layout';
 export default function AvisReclamationsApp() {
   // État pour stocker les avis/réclamations
   const [feedbacks, setFeedbacks] = useState([]);
@@ -159,7 +160,8 @@ export default function AvisReclamationsApp() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    
+   <Layout> <div className="max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">Avis & Réclamations</h1>
       <p className="text-gray-600 mb-8">
         Consultez, modérez et répondez aux commentaires et réclamations de vos clients.
@@ -368,6 +370,6 @@ export default function AvisReclamationsApp() {
           </div>
         </div>
       )}
-    </div>
+    </div> </Layout>
   );
 }

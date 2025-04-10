@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./nos-artisans.css"
+import Layout from "../components/Layout"
 
 function NosArtisans() {
   // État pour les artisans et les filtres
@@ -295,6 +296,7 @@ function NosArtisans() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
   return (
+    <Layout>
     <div className="artisans-page">
       <div className="artisans-container">
         <h1 className="page-title">Nos Artisans</h1>
@@ -422,6 +424,7 @@ function NosArtisans() {
         </div>
       </div>
     </div>
+    </Layout>
   )
 }
 

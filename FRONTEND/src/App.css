@@ -1,10 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-<<<<<<< HEAD
-=======
-  padding: 2rem;
->>>>>>> 6671c1622e3d21206f09efbe024f99b7e54aba7e
   text-align: center;
 }
 
@@ -14,17 +10,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
-<<<<<<< HEAD
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-=======
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
->>>>>>> 6671c1622e3d21206f09efbe024f99b7e54aba7e
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -33,10 +23,7 @@
   from {
     transform: rotate(0deg);
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 6671c1622e3d21206f09efbe024f99b7e54aba7e
   to {
     transform: rotate(360deg);
   }
@@ -54,8 +41,4 @@
 
 .read-the-docs {
   color: #888;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6671c1622e3d21206f09efbe024f99b7e54aba7e

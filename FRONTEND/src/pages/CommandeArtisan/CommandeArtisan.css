@@ -1,0 +1,213 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    color: black;
+}
+
+.commande-page {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.commande-header {
+    margin-bottom: 20px;
+}
+
+.commande-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.commande-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.commande-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    /* Animation zoom */
+}
+
+.commande-item:hover {
+    transform: scale(1.02);
+    /* Zoom léger au survol */
+}
+
+.commande-info {
+    flex: 1;
+}
+
+.commande-nom {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.commande-demande {
+    color: #555;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.commande-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Bouton Accepter */
+.accepter-btn {
+    background-color: #eab308;
+    /* Jaune doré */
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Espacement entre l'icône et le texte */
+}
+
+.accepter-btn:hover {
+    background-color: #d4a300;
+    /* Jaune foncé */
+    transform: scale(1.05);
+    /* Zoom léger */
+}
+
+/* Bouton Rejeter */
+.rejeter-btn {
+    background-color: #ff4d4d;
+    /* Rouge vif */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Espacement entre l'icône et le texte */
+}
+
+.rejeter-btn:hover {
+    background-color: #cc3333;
+    /* Rouge foncé */
+    transform: scale(1.05);
+    /* Zoom léger */
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.commande-item.acceptée {
+    background-color: #e0f8e9;
+    /* Fond vert clair pour acceptée */
+}
+
+.commande-item.rejetée {
+    background-color: #fbeaea;
+    /* Fond rouge clair pour rejetée */
+}
+
+.statut-label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.commande-contact {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+.commande-demande {
+    background-color: #f9f3e8;
+    border-left: 4px solid #f0c040;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.voir-plus-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.voir-plus-global-btn {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voir-plus-global-btn:hover {
+    background-color: #ae902f;
+}
+
+
+.demande-texte {
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+.statut-label.acceptée {
+    color: #2e7d32;
+    /* Vert foncé */
+    background-color: #c8e6c9;
+    /* Vert clair */
+}
+
+.statut-label.rejetée {
+    color: #c62828;
+    /* Rouge foncé */
+    background-color: #ffcdd2;
+    /* Rouge clair */
+}

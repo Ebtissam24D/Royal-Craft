@@ -53,7 +53,7 @@ body {
   gap: 1rem;
 }
 
-button {
+/* button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +65,7 @@ button {
   transition: var(--transition);
   border: none;
   background-color: var(--background);
-}
+} */
 
 .create-btn {
   background-color: var(--primary);
@@ -245,7 +245,8 @@ button {
   border-left: 4px solid var(--danger);
 }
 
-.priority-badge, .status-badge {
+.priority-badge,
+.status-badge {
   padding: 0.3rem 0.6rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -279,7 +280,8 @@ button {
   color: var(--text-light);
 }
 
-.send-btn, .delete-btn {
+.send-btn,
+.delete-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -296,7 +298,8 @@ button {
   color: var(--danger);
 }
 
-.send-btn:hover, .delete-btn:hover {
+.send-btn:hover,
+.delete-btn:hover {
   background-color: #f1f1f1;
 }
 
@@ -413,30 +416,35 @@ button {
 }
 
 @media (max-width: 768px) {
-  .notification-list-header, .notification-item {
+
+  .notification-list-header,
+  .notification-item {
     grid-template-columns: 3fr 1fr 1fr;
   }
-  
-  .col-recipients, .col-priority, .col-status, .col-date {
+
+  .col-recipients,
+  .col-priority,
+  .col-status,
+  .col-date {
     display: none;
   }
-  
+
   .notification-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .filters-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .search-container {
     width: 100%;
   }
-  
+
   .form-row {
     flex-direction: column;
   }

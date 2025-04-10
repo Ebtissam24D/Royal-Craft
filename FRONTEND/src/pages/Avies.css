@@ -1,12 +1,13 @@
 /* Style général */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #203624;
-    background-color: #ffff;
-    margin: 0;
-    padding: 0;
-  }
-  /* Mise à jour de la couleur des étoiles */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #203624;
+  background-color: #ffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mise à jour de la couleur des étoiles */
 .text-yellow-500.fill-yellow-500 {
     color: #FFD700; /* Or/doré pour le contour */
     fill: #FFD700; /* Or/doré pour le remplissage */
@@ -36,13 +37,13 @@ body {
     padding-bottom: 2rem;
   }
   
-  /* En-tête
+  /* En-tête */
   h1 {
     font-size: 1.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #203624;
-  } */
+  }
   
   .text-gray-600 {
     color: #486858;
@@ -209,7 +210,7 @@ body {
   }
   
   .bg-blue-50 {
-    background-color: rgba(249, 254, 251, 0.15);
+    background-color: rgba(100, 137, 119, 0.15);
   }
   
   .p-4 {
@@ -587,118 +588,120 @@ body {
   /* Boutons d'action */
   /* Styles de base communs pour tous les boutons */
 .button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  /* Styles pour les boutons d'action */
-  .button-masquer {
-    background-color: rgba(219, 200, 185, 0.5);
-    color: #203624;
-  }
-  
-  .button-masquer:hover {
-    background-color: #DBC8B9;
-  }
-  
-  .button-publier {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .button-publier:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .button-résolu {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .button-résolu:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .button-transférer {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .button-transférer:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .button-répondre {
-    background-color: rgba(100, 137, 119, 0.25);
-    color: #294B3B;
-  }
-  
-  .button-répondre:hover {
-    background-color: rgba(100, 137, 119, 0.4);
-  }
-  
-  .button-déjà-répondu {
-    background-color: #DBC8B9;
-    color: #486858;
-    cursor: not-allowed;
-  }
-  
-  /* Style pour les boutons de navigation avec espacement */
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5cm; /* Espacement de 1.5cm entre les boutons (moins que 2cm max) */
-    flex-wrap: wrap;
-    margin: 20px 0;
-  }
-  
-  .nav-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    border: 1px solid #486858;
-    border-radius: 0.5rem;
-    background-color: #E3D9CF;
-    color: #203624;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    min-width: 100px;
-    text-align: center;
-  }
-  
-  .nav-button:hover {
-    background-color: #DBC8B9;
-  }
-  
-  .nav-button.active {
-    background-color: #294B3B;
-    color: #E3D9CF;
-  }
-  
-  /* Utilitaires communs */
-  .rounded-md {
-    border-radius: 0.375rem;
-  }
-  
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  /* Mise à jour des styles pour les boutons de navigation */
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Styles pour les boutons d'action */
+.button-masquer {
+  background-color: rgba(219, 200, 185, 0.5);
+  color: #203624;
+}
+
+.button-masquer:hover {
+  background-color: #DBC8B9;
+}
+
+.button-publier {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.button-publier:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.button-résolu {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.button-résolu:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.button-transférer {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.button-transférer:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.button-répondre {
+  background-color: rgba(100, 137, 119, 0.25);
+  color: #294B3B;
+}
+
+.button-répondre:hover {
+  background-color: rgba(100, 137, 119, 0.4);
+}
+
+.button-déjà-répondu {
+  background-color: #DBC8B9;
+  color: #486858;
+  cursor: not-allowed;
+}
+
+/* Style pour les boutons de navigation avec espacement */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5cm;
+  /* Espacement de 1.5cm entre les boutons (moins que 2cm max) */
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #486858;
+  border-radius: 0.5rem;
+  background-color: #E3D9CF;
+  color: #203624;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  min-width: 100px;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: #DBC8B9;
+}
+
+.nav-button.active {
+  background-color: #294B3B;
+  color: #E3D9CF;
+}
+
+/* Utilitaires communs */
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Mise à jour des styles pour les boutons de navigation */
 .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg {
     display: flex;
     flex-wrap: wrap;
@@ -729,22 +732,3 @@ body {
   .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button.hover\:bg-gray-200:hover {
     background-color: #DBC8B9;
   }
-  /* Modifier le fond de la modal (remplacer le vert par du blanc) */
-.fixed.inset-0.bg-black.bg-opacity-50 {
-  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
-}
-
-/* Style pour encadrer le message de réclamation en vert */
-.modal-message-box {
-  border: 2px solid #294B3B; /* Bordure verte */
-  border-radius: 0.5rem;
-  padding: 1rem;
-  background-color: rgba(249, 254, 251, 0.2); /* Fond très légèrement teinté */
-  margin-bottom: 1.5rem;
-}
-
-/* S'assurer que le contenu de la modal reste sur fond blanc */
-.fixed.inset-0.bg-black.bg-opacity-50 .bg-white {
-  background-color: #FFFFFF;
-  box-shadow: 0 4px 6px rgba(32, 54, 36, 0.1);
-}

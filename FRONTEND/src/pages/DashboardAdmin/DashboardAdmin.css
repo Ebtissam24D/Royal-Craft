@@ -1,0 +1,218 @@
+/* dashboardArtisan.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.user-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-actions i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.1rem;
+    /* Espacement minimal entre les cartes */
+    justify-items: center;
+}
+
+.statistic-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 3px solid #e2e8f0;
+    width: 100%;
+}
+
+.statistic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.statistic-card h3 {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+}
+
+.statistic-card .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.statistic-card .percentage {
+    color: green;
+    font-size: 0.8rem;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    font-size: 18px;
+    color: #d1d5db;
+    /* gris clair */
+}
+
+.star.filled {
+    color: #fbbf24;
+    /* jaune doré */
+}
+
+
+/* Grille pour les graphiques */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Crée une grille de 4 colonnes */
+    gap: 1rem;
+    /* Espacement entre les éléments de la grille */
+}
+
+.chart-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chart-evolution,
+.chart-distribution {
+    width: 100%;
+    /* Assure que les graphiques remplissent entièrement leur espace */
+}
+
+.table-commandes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-commandes thead tr {
+    background-color: #f9fafb;
+}
+
+.table-commandes th,
+.table-commandes td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.table-commandes tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.table-commandes tbody tr:hover {
+    background-color: #f4f5f7;
+}
+
+.review-item {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-item img {
+    border-radius: 50%;
+}
+
+.review-item .text-yellow-500 {
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+/* Responsive adjustments for statistic cards */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+        /* Sur mobile, les graphiques s'affichent un dessous l'autre */
+    }
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-green {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-yellow {
+    background-color: #fef3c7;
+    color: #92400e;
+}
