@@ -1,13 +1,13 @@
 import "./index.css"
+import HomePage from "./pages/Homepage"
 
-import Logform from "./pages/Logform"
 
 
 
 
 function App() {
   return (
-      <Logform/>
+      <HomePage/>
   )
 }
 

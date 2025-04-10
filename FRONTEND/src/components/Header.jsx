@@ -27,8 +27,8 @@ function Header() {
           <a href="/musee" className="nav-link">
             Musée virtuel
           </a>
-          <a href="/contact" className="nav-link">
-            Contact & Support
+          <a href="/Apropos" className="nav-link">
+            A propos
           </a>
         </nav>
 
