@@ -12,6 +12,8 @@ import table_chaiseImage from "../../assets/images/table_chaises.jpg";
 import MirrorImage from "../../assets/images/mirror.jpg";
 import profileH from "../../assets/images/profileH.png";
 import profileF from "../../assets/images/profileF.png";
+import Layout from "../../components/Layout";
+
 
 const PlusdedetailleP = () => {
     const [favori, setFavori] = useState(false); // État pour le bouton principal
@@ -43,7 +45,7 @@ const PlusdedetailleP = () => {
     };
 
     return (
-        <div className="product-detail-container">
+        <Layout> <div className="product-detail-container">
             {/* Section principale */}
             <div className="product-main">
                 <div className="product-images">
@@ -238,7 +240,7 @@ const PlusdedetailleP = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></Layout>
     );
 };
 

@@ -1,731 +1,742 @@
 /* Style général */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #203624;
-    background-color: #ffff;
-    margin: 0;
-    padding: 0;
-  }
-  /* Mise à jour de la couleur des étoiles */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #203624;
+  background-color: #ffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mise à jour de la couleur des étoiles */
 .text-yellow-500.fill-yellow-500 {
-    color: #FFD700; /* Or/doré pour le contour */
-    fill: #FFD700; /* Or/doré pour le remplissage */
-  }
-  
-  /* Style pour les étoiles inactives (gris clair) */
-  .text-gray-300 {
-    color: #E3D9CF; /* Couleur plus claire assortie à votre palette */
-  }
-  
-  .max-w-6xl {
-    max-width: 1200px;
-  }
-  
-  .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  /* En-tête */
-  h1 {
+  color: #FFD700;
+  /* Or/doré pour le contour */
+  fill: #FFD700;
+  /* Or/doré pour le remplissage */
+}
+
+/* Style pour les étoiles inactives (gris clair) */
+.text-gray-300 {
+  color: #E3D9CF;
+  /* Couleur plus claire assortie à votre palette */
+}
+
+.max-w-6xl {
+  max-width: 1200px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* En-tête */
+/* class */
+/* h1 {
     font-size: 1.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #203624;
+  } */
+
+.text-gray-600 {
+  color: #486858;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+/* Onglets */
+.bg-gray-100 {
+  background-color: #DBC8B9;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.bg-white {
+  background-color: #E3D9CF;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(32, 54, 36, 0.1), 0 1px 2px 0 rgba(32, 54, 36, 0.06);
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #DBC8B9;
+}
+
+/* Barre de recherche */
+.relative {
+  position: relative;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.border {
+  border: 1px solid #648977;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-3 {
+  left: 0.75rem;
+}
+
+.top-2\.5 {
+  top: 0.625rem;
+}
+
+.text-gray-400 {
+  color: #648977;
+}
+
+/* Bouton Exporter */
+.bg-blue-600 {
+  background-color: #294B3B;
+}
+
+.text-white {
+  color: #E3D9CF;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+/* Dropdown Exporter */
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(32, 54, 36, 0.1), 0 4px 6px -2px rgba(32, 54, 36, 0.05);
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-gray-700 {
+  color: #294B3B;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #DBC8B9;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Statistiques */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.bg-blue-50 {
+  background-color: rgba(100, 137, 119, 0.15);
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.border-blue-200 {
+  border-color: #648977;
+}
+
+.text-blue-700 {
+  color: #294B3B;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.bg-indigo-50 {
+  background-color: rgba(72, 104, 88, 0.15);
+}
+
+.border-indigo-200 {
+  border-color: #486858;
+}
+
+.text-indigo-700 {
+  color: #294B3B;
+}
+
+.bg-orange-50 {
+  background-color: rgba(219, 200, 185, 0.3);
+}
+
+.border-orange-200 {
+  border-color: #DBC8B9;
+}
+
+.text-orange-700 {
+  color: #203624;
+}
+
+.bg-red-50 {
+  background-color: rgba(219, 200, 185, 0.4);
+}
+
+.border-red-200 {
+  border-color: #DBC8B9;
+}
+
+.text-red-700 {
+  color: #203624;
+}
+
+/* Liste des avis/réclamations */
+.space-y-4>*+* {
+  margin-top: 1rem;
+}
+
+.border-l-4 {
+  border-left-width: 4px;
+}
+
+.border-l-yellow-500 {
+  border-left-color: #648977;
+}
+
+.border-l-green-500 {
+  border-left-color: #486858;
+}
+
+.border-gray-200 {
+  border-color: #648977;
+}
+
+.bg-purple-50 {
+  background-color: rgba(72, 104, 88, 0.15);
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.bg-red-100 {
+  background-color: rgba(219, 200, 185, 0.5);
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-purple-100 {
+  background-color: rgba(72, 104, 88, 0.2);
+}
+
+.text-purple-700 {
+  color: #294B3B;
+}
+
+.text-yellow-500 {
+  color: #648977;
+}
+
+.fill-yellow-500 {
+  fill: #648977;
+}
+
+.text-gray-300 {
+  color: #DBC8B9;
+}
+
+.text-gray-500 {
+  color: #486858;
+}
+
+.bg-yellow-100 {
+  background-color: rgba(100, 137, 119, 0.2);
+}
+
+.text-yellow-700 {
+  color: #486858;
+}
+
+.bg-green-100 {
+  background-color: rgba(72, 104, 88, 0.2);
+}
+
+.text-green-700 {
+  color: #294B3B;
+}
+
+.bg-blue-100 {
+  background-color: rgba(100, 137, 119, 0.25);
+}
+
+.bg-indigo-100 {
+  background-color: rgba(72, 104, 88, 0.25);
+}
+
+.bg-orange-100 {
+  background-color: rgba(219, 200, 185, 0.5);
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.text-red-600 {
+  color: #203624;
+}
+
+.hover\:bg-red-200:hover {
+  background-color: #DBC8B9;
+}
+
+.text-green-600 {
+  color: #294B3B;
+}
+
+.hover\:bg-green-200:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.text-purple-600 {
+  color: #294B3B;
+}
+
+.hover\:bg-purple-200:hover {
+  background-color: rgba(72, 104, 88, 0.3);
+}
+
+.text-blue-600 {
+  color: #294B3B;
+}
+
+.hover\:bg-blue-200:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.text-gray-600 {
+  color: #486858;
+}
+
+/* Modal */
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-black {
+  background-color: #203624;
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.min-h-32 {
+  min-height: 8rem;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.space-x-2>*+* {
+  margin-left: 0.5rem;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #203624;
+}
+
+.disabled\:bg-blue-300:disabled {
+  background-color: #648977;
+}
+
+.min-h-24 {
+  min-height: 6rem;
+}
+
+.hover\:bg-purple-700:hover {
+  background-color: #203624;
+}
+
+/* Styles pour les badges de statut */
+.bg-green-100 {
+  background-color: rgba(72, 104, 88, 0.2);
+}
+
+.text-green-600 {
+  color: #294B3B;
+}
+
+.bg-yellow-100 {
+  background-color: rgba(100, 137, 119, 0.2);
+}
+
+.text-yellow-700 {
+  color: #486858;
+}
+
+.bg-blue-100 {
+  background-color: rgba(100, 137, 119, 0.25);
+}
+
+.text-blue-700 {
+  color: #294B3B;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
   }
-  
-  .text-gray-600 {
-    color: #486858;
-  }
-  
-  .mb-8 {
-    margin-bottom: 2rem;
-  }
-  
-  /* Onglets */
-  .bg-gray-100 {
-    background-color: #DBC8B9;
-  }
-  
-  .p-1 {
-    padding: 0.25rem;
-  }
-  
-  .rounded-lg {
-    border-radius: 0.5rem;
-  }
-  
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .rounded-md {
-    border-radius: 0.375rem;
-  }
-  
-  .bg-white {
-    background-color: #E3D9CF;
-  }
-  
-  .shadow {
-    box-shadow: 0 1px 3px 0 rgba(32, 54, 36, 0.1), 0 1px 2px 0 rgba(32, 54, 36, 0.06);
-  }
-  
-  .hover\:bg-gray-200:hover {
-    background-color: #DBC8B9;
-  }
-  
-  /* Barre de recherche */
-  .relative {
-    position: relative;
-  }
-  
-  .w-full {
-    width: 100%;
-  }
-  
-  .pl-10 {
-    padding-left: 2.5rem;
-  }
-  
-  .pr-4 {
-    padding-right: 1rem;
-  }
-  
-  .border {
-    border: 1px solid #648977;
-  }
-  
-  .absolute {
-    position: absolute;
-  }
-  
-  .left-3 {
-    left: 0.75rem;
-  }
-  
-  .top-2\.5 {
-    top: 0.625rem;
-  }
-  
-  .text-gray-400 {
-    color: #648977;
-  }
-  
-  /* Bouton Exporter */
-  .bg-blue-600 {
-    background-color: #294B3B;
-  }
-  
-  .text-white {
-    color: #E3D9CF;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .items-center {
+
+  .md\:items-center {
     align-items: center;
   }
-  
-  .mr-2 {
-    margin-right: 0.5rem;
-  }
-  
-  .ml-2 {
-    margin-left: 0.5rem;
-  }
-  
-  /* Dropdown Exporter */
-  .mt-2 {
-    margin-top: 0.5rem;
-  }
-  
-  .w-48 {
-    width: 12rem;
-  }
-  
-  .shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(32, 54, 36, 0.1), 0 4px 6px -2px rgba(32, 54, 36, 0.05);
-  }
-  
-  .z-10 {
-    z-index: 10;
-  }
-  
-  .py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-  
-  .text-sm {
-    font-size: 0.875rem;
-  }
-  
-  .text-gray-700 {
-    color: #294B3B;
-  }
-  
-  .hover\:bg-gray-100:hover {
-    background-color: #DBC8B9;
-  }
-  
-  .text-left {
-    text-align: left;
-  }
-  
-  /* Statistiques */
-  .grid {
-    display: grid;
-  }
-  
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  
-  .gap-4 {
-    gap: 1rem;
-  }
-  
-  .mb-6 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .bg-blue-50 {
-    background-color: rgba(100, 137, 119, 0.15);
-  }
-  
-  .p-4 {
-    padding: 1rem;
-  }
-  
-  .border-blue-200 {
-    border-color: #648977;
-  }
-  
-  .text-blue-700 {
-    color: #294B3B;
-  }
-  
-  .text-lg {
-    font-size: 1.125rem;
-  }
-  
-  .font-semibold {
-    font-weight: 600;
-  }
-  
-  .text-2xl {
-    font-size: 1.5rem;
-  }
-  
-  .font-bold {
-    font-weight: 700;
-  }
-  
-  .bg-indigo-50 {
-    background-color: rgba(72, 104, 88, 0.15);
-  }
-  
-  .border-indigo-200 {
-    border-color: #486858;
-  }
-  
-  .text-indigo-700 {
-    color: #294B3B;
-  }
-  
-  .bg-orange-50 {
-    background-color: rgba(219, 200, 185, 0.3);
-  }
-  
-  .border-orange-200 {
-    border-color: #DBC8B9;
-  }
-  
-  .text-orange-700 {
-    color: #203624;
-  }
-  
-  .bg-red-50 {
-    background-color: rgba(219, 200, 185, 0.4);
-  }
-  
-  .border-red-200 {
-    border-color: #DBC8B9;
-  }
-  
-  .text-red-700 {
-    color: #203624;
-  }
-  
-  /* Liste des avis/réclamations */
-  .space-y-4 > * + * {
-    margin-top: 1rem;
-  }
-  
-  .border-l-4 {
-    border-left-width: 4px;
-  }
-  
-  .border-l-yellow-500 {
-    border-left-color: #648977;
-  }
-  
-  .border-l-green-500 {
-    border-left-color: #486858;
-  }
-  
-  .border-gray-200 {
-    border-color: #648977;
-  }
-  
-  .bg-purple-50 {
-    background-color: rgba(72, 104, 88, 0.15);
-  }
-  
-  .justify-between {
-    justify-content: space-between;
-  }
-  
-  .items-start {
-    align-items: flex-start;
-  }
-  
-  .mb-4 {
-    margin-bottom: 1rem;
-  }
-  
-  .text-xs {
-    font-size: 0.75rem;
-  }
-  
-  .bg-red-100 {
-    background-color: rgba(219, 200, 185, 0.5);
-  }
-  
-  .rounded-full {
-    border-radius: 9999px;
-  }
-  
-  .bg-purple-100 {
-    background-color: rgba(72, 104, 88, 0.2);
-  }
-  
-  .text-purple-700 {
-    color: #294B3B;
-  }
-  
-  .text-yellow-500 {
-    color: #648977;
-  }
-  
-  .fill-yellow-500 {
-    fill: #648977;
-  }
-  
-  .text-gray-300 {
-    color: #DBC8B9;
-  }
-  
-  .text-gray-500 {
-    color: #486858;
-  }
-  
-  .bg-yellow-100 {
-    background-color: rgba(100, 137, 119, 0.2);
-  }
-  
-  .text-yellow-700 {
-    color: #486858;
-  }
-  
-  .bg-green-100 {
-    background-color: rgba(72, 104, 88, 0.2);
-  }
-  
-  .text-green-700 {
-    color: #294B3B;
-  }
-  
-  .bg-blue-100 {
-    background-color: rgba(100, 137, 119, 0.25);
-  }
-  
-  .bg-indigo-100 {
-    background-color: rgba(72, 104, 88, 0.25);
-  }
-  
-  .bg-orange-100 {
-    background-color: rgba(219, 200, 185, 0.5);
-  }
-  
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  
-  .gap-2 {
-    gap: 0.5rem;
-  }
-  
-  .px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  
-  .py-1\.5 {
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
-  }
-  
-  .text-red-600 {
-    color: #203624;
-  }
-  
-  .hover\:bg-red-200:hover {
-    background-color: #DBC8B9;
-  }
-  
-  .text-green-600 {
-    color: #294B3B;
-  }
-  
-  .hover\:bg-green-200:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .text-purple-600 {
-    color: #294B3B;
-  }
-  
-  .hover\:bg-purple-200:hover {
-    background-color: rgba(72, 104, 88, 0.3);
-  }
-  
-  .text-blue-600 {
-    color: #294B3B;
-  }
-  
-  .hover\:bg-blue-200:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .text-gray-600 {
-    color: #486858;
-  }
-  
-  /* Modal */
-  .fixed {
-    position: fixed;
-  }
-  
-  .inset-0 {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .bg-black {
-    background-color: #203624;
-  }
-  
-  .bg-opacity-50 {
-    --tw-bg-opacity: 0.5;
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
-  
-  .z-50 {
-    z-index: 50;
-  }
-  
-  .max-w-2xl {
-    max-width: 42rem;
-  }
-  
-  .min-h-32 {
-    min-height: 8rem;
-  }
-  
-  .justify-end {
-    justify-content: flex-end;
-  }
-  
-  .space-x-2 > * + * {
-    margin-left: 0.5rem;
-  }
-  
-  .hover\:bg-blue-700:hover {
-    background-color: #203624;
-  }
-  
-  .disabled\:bg-blue-300:disabled {
-    background-color: #648977;
-  }
-  
-  .min-h-24 {
-    min-height: 6rem;
-  }
-  
-  .hover\:bg-purple-700:hover {
-    background-color: #203624;
-  }
-  
-  /* Styles pour les badges de statut */
-  .bg-green-100 {
-    background-color: rgba(72, 104, 88, 0.2);
-  }
-  
-  .text-green-600 {
-    color: #294B3B;
-  }
-  
-  .bg-yellow-100 {
-    background-color: rgba(100, 137, 119, 0.2);
-  }
-  
-  .text-yellow-700 {
-    color: #486858;
-  }
-  
-  .bg-blue-100 {
-    background-color: rgba(100, 137, 119, 0.25);
-  }
-  
-  .text-blue-700 {
-    color: #294B3B;
-  }
-  
-  /* Responsive */
-  @media (min-width: 768px) {
-    .md\:flex-row {
-      flex-direction: row;
-    }
-    
-    .md\:items-center {
-      align-items: center;
-    }
-    
-    .md\:w-auto {
-      width: auto;
-    }
-    
-    .md\:w-64 {
-      width: 16rem;
-    }
-    
-    .md\:grid-cols-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  
-  /* Styles spécifiques pour reproduire l'image */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.25rem 0.5rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-  
-  .badge-publié {
-    background-color: rgba(100, 137, 119, 0.25);
-    color: #294B3B;
-  }
-  
-  .badge-en-attente {
-    background-color: rgba(100, 137, 119, 0.2);
-    color: #486858;
-  }
-  
-  .badge-résolu {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .badge-avis {
-    background-color: rgba(72, 104, 88, 0.25);
-    color: #294B3B;
-  }
-  
-  .badge-réclamation {
-    background-color: rgba(219, 200, 185, 0.5);
-    color: #203624;
-  }
-  
-  .badge-urgent {
-    background-color: rgba(219, 200, 185, 0.5);
-    color: #203624;
-  }
-  
-  .badge-transféré {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  /* Boutons d'action */
-  /* Styles de base communs pour tous les boutons */
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Styles spécifiques pour reproduire l'image */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-publié {
+  background-color: rgba(100, 137, 119, 0.25);
+  color: #294B3B;
+}
+
+.badge-en-attente {
+  background-color: rgba(100, 137, 119, 0.2);
+  color: #486858;
+}
+
+.badge-résolu {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.badge-avis {
+  background-color: rgba(72, 104, 88, 0.25);
+  color: #294B3B;
+}
+
+.badge-réclamation {
+  background-color: rgba(219, 200, 185, 0.5);
+  color: #203624;
+}
+
+.badge-urgent {
+  background-color: rgba(219, 200, 185, 0.5);
+  color: #203624;
+}
+
+.badge-transféré {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+/* Boutons d'action */
+/* Styles de base communs pour tous les boutons */
 .button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  /* Styles pour les boutons d'action */
-  .button-masquer {
-    background-color: rgba(219, 200, 185, 0.5);
-    color: #203624;
-  }
-  
-  .button-masquer:hover {
-    background-color: #DBC8B9;
-  }
-  
-  .button-publier {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .button-publier:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .button-résolu {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .button-résolu:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .button-transférer {
-    background-color: rgba(72, 104, 88, 0.2);
-    color: #294B3B;
-  }
-  
-  .button-transférer:hover {
-    background-color: rgba(100, 137, 119, 0.3);
-  }
-  
-  .button-répondre {
-    background-color: rgba(100, 137, 119, 0.25);
-    color: #294B3B;
-  }
-  
-  .button-répondre:hover {
-    background-color: rgba(100, 137, 119, 0.4);
-  }
-  
-  .button-déjà-répondu {
-    background-color: #DBC8B9;
-    color: #486858;
-    cursor: not-allowed;
-  }
-  
-  /* Style pour les boutons de navigation avec espacement */
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5cm; /* Espacement de 1.5cm entre les boutons (moins que 2cm max) */
-    flex-wrap: wrap;
-    margin: 20px 0;
-  }
-  
-  .nav-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    border: 1px solid #486858;
-    border-radius: 0.5rem;
-    background-color: #E3D9CF;
-    color: #203624;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    min-width: 100px;
-    text-align: center;
-  }
-  
-  .nav-button:hover {
-    background-color: #DBC8B9;
-  }
-  
-  .nav-button.active {
-    background-color: #294B3B;
-    color: #E3D9CF;
-  }
-  
-  /* Utilitaires communs */
-  .rounded-md {
-    border-radius: 0.375rem;
-  }
-  
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  /* Mise à jour des styles pour les boutons de navigation */
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Styles pour les boutons d'action */
+.button-masquer {
+  background-color: rgba(219, 200, 185, 0.5);
+  color: #203624;
+}
+
+.button-masquer:hover {
+  background-color: #DBC8B9;
+}
+
+.button-publier {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.button-publier:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.button-résolu {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.button-résolu:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.button-transférer {
+  background-color: rgba(72, 104, 88, 0.2);
+  color: #294B3B;
+}
+
+.button-transférer:hover {
+  background-color: rgba(100, 137, 119, 0.3);
+}
+
+.button-répondre {
+  background-color: rgba(100, 137, 119, 0.25);
+  color: #294B3B;
+}
+
+.button-répondre:hover {
+  background-color: rgba(100, 137, 119, 0.4);
+}
+
+.button-déjà-répondu {
+  background-color: #DBC8B9;
+  color: #486858;
+  cursor: not-allowed;
+}
+
+/* Style pour les boutons de navigation avec espacement */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5cm;
+  /* Espacement de 1.5cm entre les boutons (moins que 2cm max) */
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #486858;
+  border-radius: 0.5rem;
+  background-color: #E3D9CF;
+  color: #203624;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  min-width: 100px;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: #DBC8B9;
+}
+
+.nav-button.active {
+  background-color: #294B3B;
+  color: #E3D9CF;
+}
+
+/* Utilitaires communs */
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Mise à jour des styles pour les boutons de navigation */
 .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5cm; /* Espacement de 1.5cm entre les boutons (moins que 2cm max) */
-    background-color: white; /* Changement de la couleur d'arrière-plan en blanc */
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    justify-content: center; /* Centre les boutons horizontalement */
-    margin-bottom: 1rem;
-  }
-  
-  /* Style pour les boutons individuels */
-  .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    transition: background-color 0.2s;
-    min-width: 100px; /* Largeur minimale pour uniformité */
-    text-align: center;
-  }
-  
-  /* Style pour le bouton actif */
-  .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button.bg-white.shadow {
-    background-color: #E3D9CF;
-    box-shadow: 0 1px 3px 0 rgba(32, 54, 36, 0.1), 0 1px 2px 0 rgba(32, 54, 36, 0.06);
-  }
-  
-  /* Style au survol */
-  .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button.hover\:bg-gray-200:hover {
-    background-color: #DBC8B9;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5cm;
+  /* Espacement de 1.5cm entre les boutons (moins que 2cm max) */
+  background-color: white;
+  /* Changement de la couleur d'arrière-plan en blanc */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  /* Centre les boutons horizontalement */
+  margin-bottom: 1rem;
+}
+
+/* Style pour les boutons individuels */
+.flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+  min-width: 100px;
+  /* Largeur minimale pour uniformité */
+  text-align: center;
+}
+
+/* Style pour le bouton actif */
+.flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button.bg-white.shadow {
+  background-color: #E3D9CF;
+  box-shadow: 0 1px 3px 0 rgba(32, 54, 36, 0.1), 0 1px 2px 0 rgba(32, 54, 36, 0.06);
+}
+
+/* Style au survol */
+.flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button.hover\:bg-gray-200:hover {
+  background-color: #DBC8B9;
+}

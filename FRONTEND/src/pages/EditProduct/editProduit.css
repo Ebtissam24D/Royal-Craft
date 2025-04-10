@@ -1,0 +1,279 @@
+ /* editProduit.css */
+
+ /* Global Reset */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f4f5f7;
+     /* Fond clair */
+     color: #333;
+     /* Texte principal */
+ }
+
+ .edit-product-container {
+     max-width: 1200px;
+     /* Adjusted for wider layout */
+     margin: 20px auto;
+     padding: 20px;
+     background-color: white;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+ }
+
+ /* Header */
+ .page-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 20px;
+     /* Allow absolute positioning for the Delete button */
+ }
+
+ .page-header h1 {
+     font-size: 24px;
+     margin: 0;
+ }
+
+
+ /* Delete Button */
+ .delete-button {
+     background-color: #ff4d4d;
+     /* Rouge vif */
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     /* Padding for size */
+     border-radius: 5px;
+     /* Rounded corners */
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     /* Smooth hover effect */
+     position: absolute;
+     /* Position absolutely within the header */
+     top: 50%;
+     /* Center vertically */
+     transform: translateY(-50%);
+     /* Adjust vertical alignment */
+     right: 270px;
+     /* Move inward to leave space for the sidebar (250px + 20px margin) */
+     z-index: 10;
+     /* Ensure it appears above other elements */
+ }
+
+ .delete-button:hover {
+     background-color: #cc3333;
+     /* Rouge plus foncé */
+ }
+
+ /* Header */
+ .page-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 20px;
+     position: relative;
+     /* Required for absolute positioning of child */
+     padding-right: 20px;
+     /* Add padding to avoid overlap with the button */
+ }
+
+ /* Content Container */
+ .content-container {
+     display: flex;
+     /* Align form and sidebar side by side */
+     gap: 20px;
+     /* Space between form and sidebar */
+ }
+
+ /* Form Fields */
+ .edit-form {
+     flex: 1;
+     /* Take up remaining space */
+     display: grid;
+     gap: 20px;
+ }
+
+ .form-group {
+     display: grid;
+     gap: 10px;
+ }
+
+ .side-by-side {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     /* Split into two equal columns */
+     gap: 20px;
+     /* Space between columns */
+ }
+
+ .field-half {
+     display: flex;
+     flex-direction: column;
+ }
+
+ label {
+     font-weight: bold;
+     color: #333;
+ }
+
+ label span {
+     color: red;
+     /* Indicateur de champ obligatoire */
+ }
+
+ input,
+ select,
+ textarea {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+
+ textarea {
+     resize: vertical;
+ }
+
+ /* Action Buttons */
+ .action-buttons {
+     display: flex;
+     gap: 10px;
+ }
+
+ .save-button {
+     background-color: #eab308;
+     /* Orange */
+     color: black;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ .save-button:hover {
+     background-color: #d4a300;
+     /* Orange plus foncé */
+ }
+
+ .cancel-button {
+     background-color: #9ca3af;
+     /* Gris */
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+
+ /* Form Fields */
+ .edit-form {
+     flex: 1;
+     /* Take up remaining space */
+     display: grid;
+     gap: 20px;
+ }
+
+ /* Sidebar */
+ .sidebar-right {
+     width: 250px;
+     /* Largeur fixe */
+     background-color: #f9fafb;
+     /* Fond clair */
+     border-left: 1px solid #e5e7eb;
+     /* Ligne de séparation */
+     padding: 20px;
+     /* Espacement interne */
+     border-radius: 10px;
+     /* Coins arrondis */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     /* Ombre légère */
+ }
+
+ .sidebar-right nav ul {
+     list-style: none;
+     /* Supprime les puces */
+     padding: 0;
+     margin: 0;
+ }
+
+ .sidebar-right nav ul li {
+     margin-bottom: 10px;
+     /* Espace entre les éléments */
+ }
+
+ .sidebar-right nav ul li a {
+     text-decoration: none;
+     /* Supprime le soulignement */
+     color: #333;
+     /* Couleur du texte */
+     font-weight: bold;
+     /* Texte en gras */
+     padding: 10px;
+     /* Espacement interne */
+     display: block;
+     /* Rend le lien cliquable sur toute la largeur */
+     border-radius: 5px;
+     /* Coins arrondis */
+     transition: background-color 0.3s ease;
+     /* Effet de transition */
+ }
+
+ .sidebar-right nav ul li {
+     margin-bottom: 10px;
+     /* Space between items */
+ }
+
+ .sidebar-right nav ul li a {
+     text-decoration: none;
+     /* Remove underline */
+     color: #333;
+     /* Text color */
+     font-weight: bold;
+     /* Bold font */
+     padding: 10px;
+     /* Padding for clickable area */
+     display: block;
+     /* Make the entire area clickable */
+     border-radius: 5px;
+     /* Rounded corners */
+     transition: background-color 0.3s ease;
+     /* Smooth hover effect */
+ }
+
+ .sidebar-right nav ul li a.active {
+     background-color: #eab308;
+     /* Couleur de fond pour le lien actif */
+     color: black;
+     /* Couleur du texte pour le lien actif */
+ }
+
+ .sidebar-right nav ul li a:hover {
+     background-color: #d4a300;
+     /* Couleur de fond au survol */
+     color: black;
+     /* Couleur du texte au survol */
+ }
+
+ /* Responsive Design */
+ @media (max-width: 992px) {
+     .content-container {
+         flex-direction: column;
+         /* Stack form and sidebar vertically */
+     }
+
+     .sidebar-right {
+         width: 100%;
+         /* Full width on smaller screens */
+         border-left: none;
+         /* Remove separator */
+         padding: 10px;
+     }
+ }
