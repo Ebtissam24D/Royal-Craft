@@ -7,6 +7,7 @@ import Cart from "./pages/Cart"
 import HomePage from "./pages/Homepage"
 import Logform from "./pages/Logform"
 import SignupForm from "./pages/SignupForm"
+import ProductsPage from "./pages/Productpage"
 
 
 
@@ -19,7 +20,7 @@ import SignupForm from "./pages/SignupForm"
 
 function App() {
   return (
-    < Logform />
+    < ProductsPage />
   )
 }
 
