@@ -1,311 +1,311 @@
 /* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Inter", Arial, sans-serif;
-    background-color: #f4f5f7;
-    /* Fond clair */
-    color: #333;
-    /* Texte noir */
-    line-height: 1.6;
-    font-size: 16px;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #f4f5f7;
+  /* Fond clair */
+  color: #333;
+  /* Texte noir */
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 /* Container */
 .edit-product-container {
-    display: flex;
-    min-height: 100vh;
-    gap: 20px;
-    /* Espacement entre les sections */
-    padding: 20px;
+  display: flex;
+  min-height: 100vh;
+  gap: 20px;
+  /* Espacement entre les sections */
+  padding: 20px;
 }
 
 /* Sidebar Gauche */
 .sidebar-left {
-    width: 240px;
-    background-color: white;
-    /* Fond blanc */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre légère */
-    padding: 20px;
-    border-radius: 10px;
+  width: 240px;
+  background-color: white;
+  /* Fond blanc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .sidebar-left ul {
-    list-style: none;
+  list-style: none;
 }
 
 .sidebar-left li a {
-    color: #9ca3af;
-    /* Gris pour les liens inactifs */
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    /* Transition fluide */
+  color: #9ca3af;
+  /* Gris pour les liens inactifs */
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  /* Transition fluide */
 }
 
 .sidebar-left li a:hover {
-    color: #eab308;
-    /* Jaune doré au survol */
-    background-color: #f9fafb;
-    /* Fond très clair */
+  color: #eab308;
+  /* Jaune doré au survol */
+  background-color: #f9fafb;
+  /* Fond très clair */
 }
 
 .sidebar-left li a.active {
-    color: black;
-    /* Texte noir pour les liens actifs */
-    background-color: #eab308;
-    /* Jaune doré pour les liens actifs */
-    font-weight: bold;
+  color: black;
+  /* Texte noir pour les liens actifs */
+  background-color: #eab308;
+  /* Jaune doré pour les liens actifs */
+  font-weight: bold;
 }
 
 /* Main Content */
 .main-content {
-    flex: 1;
-    padding: 20px;
-    background-color: white;
-    /* Fond blanc */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre légère */
-    border-radius: 10px;
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  /* Fond blanc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  border-radius: 10px;
 }
 
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .page-header h1 {
-    font-size: 24px;
-    margin: 0;
-    color: #333;
-    /* Titre en noir */
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+  /* Titre en noir */
 }
 
-.delete-button {
-    background-color: #ff4d4d;
-    /* Rouge vif */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-    font-weight: bold;
-    justify-content: flex-end;
+.deleteN-button {
+  background-color: #ff4d4d;
+  /* Rouge vif */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: flex-end;
 }
 
 .delete-button:hover {
-    background-color: #cc3333;
-    /* Rouge plus foncé */
+  background-color: #cc3333;
+  /* Rouge plus foncé */
 }
 
-.image-section {
-    margin-bottom: 20px;
+.image-sectionH {
+  margin-bottom: 20px;
 }
 
 .image-section h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-    /* Titre en noir */
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+  /* Titre en noir */
 }
 
 .image-uploader {
-    background-color: #f9fafb;
-    /* Fond très clair */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Ombre légère */
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #f9fafb;
+  /* Fond très clair */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .image-uploader:hover {
-    background-color: #e5e7eb;
-    /* Gris très clair au survol */
+  background-color: #e5e7eb;
+  /* Gris très clair au survol */
 }
 
 .browse-link {
-    color: #eab308;
-    /* Jaune doré */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+  color: #eab308;
+  /* Jaune doré */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .image-preview {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    /* Permettre le retour à la ligne */
-    margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* Permettre le retour à la ligne */
+  margin-top: 10px;
 }
 
 .image-item {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background-color: #e5e7eb;
-    /* Gris très clair */
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Ombre légère */
-    transition: transform 0.3s ease;
-    /* Effet de zoom */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #e5e7eb;
+  /* Gris très clair */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  transition: transform 0.3s ease;
+  /* Effet de zoom */
 }
 
 .image-item:hover {
-    transform: scale(1.05);
-    /* Zoom léger au survol */
+  transform: scale(1.05);
+  /* Zoom léger au survol */
 }
 
 .image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .remove-image {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent */
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 50%;
-    /* Bouton circulaire */
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  /* Bouton circulaire */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .remove-image:hover {
-    background-color: #ff4d4d;
-    /* Rouge au survol */
+  background-color: #ff4d4d;
+  /* Rouge au survol */
 }
 
 .loading-indicator {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 12px;
 }
 
 .cancel-link {
-    color: #eab308;
-    /* Jaune doré */
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 14px;
-    transition: color 0.3s ease;
+  color: #eab308;
+  /* Jaune doré */
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
 .cancel-link:hover {
-    color: #d4a300;
-    /* Jaune doré plus foncé */
+  color: #d4a300;
+  /* Jaune doré plus foncé */
 }
 
 .action-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
 
 .save-button,
 .cancel-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .save-button {
-    background-color: #eab308;
-    /* Jaune doré */
-    color: black;
+  background-color: #eab308;
+  /* Jaune doré */
+  color: black;
 }
 
 .save-button:hover {
-    background-color: #d4a300;
-    /* Jaune doré plus foncé */
+  background-color: #d4a300;
+  /* Jaune doré plus foncé */
 }
 
 .cancel-button {
-    background-color: #9ca3af;
-    /* Gris */
-    color: white;
+  background-color: #9ca3af;
+  /* Gris */
+  color: white;
 }
 
 .cancel-button:hover {
-    background-color: #71717a;
-    /* Gris plus foncé */
+  background-color: #71717a;
+  /* Gris plus foncé */
 }
 
 .sidebar-right {
-    width: 250px;
-    /* Largeur fixe pour la barre latérale droite */
-    background-color: #f9fafb;
-    /* Fond très clair */
-    border-left: 1px solid #e5e7eb;
-    /* Ligne séparatrice */
-    padding: 20px;
-    border-radius: 10px;
+  width: 250px;
+  /* Largeur fixe pour la barre latérale droite */
+  background-color: #f9fafb;
+  /* Fond très clair */
+  border-left: 1px solid #e5e7eb;
+  /* Ligne séparatrice */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .sidebar-right nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar-right nav ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .sidebar-right nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .sidebar-right nav ul li a.active {
-    background-color: #eab308;
-    /* Jaune doré pour les liens actifs */
-    color: black;
+  background-color: #eab308;
+  /* Jaune doré pour les liens actifs */
+  color: black;
 }
 
 .sidebar-right nav ul li a:hover {
-    background-color: #d4a300;
-    /* Jaune doré plus foncé */
-    color: black;
+  background-color: #d4a300;
+  /* Jaune doré plus foncé */
+  color: black;
 }
