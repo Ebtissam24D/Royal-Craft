@@ -1,13 +1,14 @@
 import "./index.css"
+import PlusdedetailleP from "./pages/PlusDedetailleProduit/Plusdedetaille"
 
-import Logform from "./pages/Logform"
+
 
 
 
 
 function App() {
   return (
-      <Logform/>
+    <PlusdedetailleP />
   )
 }
 
