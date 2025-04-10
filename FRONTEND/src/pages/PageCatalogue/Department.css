@@ -556,7 +556,7 @@ body {
     /* Jaune foncé au survol */
 }
 
-/* .action-buttons button {
+.action-buttons button {
     padding: 10px 20px;
     font-size: 14px;
     border: none;
@@ -565,7 +565,7 @@ body {
     font-weight: normal;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-transform: none;
-} */
+}
 
 /* Style pour la liste déroulante */
 .create-form select {

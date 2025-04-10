@@ -127,14 +127,14 @@
     margin-bottom: 0.75rem;
 }
 
-/* .modal-content button {
+.modal-content button {
     padding: 0.5rem 1rem;
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
-} */
+}
 
 .modal-content button:hover {
     opacity: 0.9;
