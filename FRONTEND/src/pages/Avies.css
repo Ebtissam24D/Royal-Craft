@@ -36,13 +36,13 @@ body {
     padding-bottom: 2rem;
   }
   
-  /* En-tête */
+  /* En-tête
   h1 {
     font-size: 1.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #203624;
-  }
+  } */
   
   .text-gray-600 {
     color: #486858;
@@ -209,7 +209,7 @@ body {
   }
   
   .bg-blue-50 {
-    background-color: rgba(100, 137, 119, 0.15);
+    background-color: rgba(249, 254, 251, 0.15);
   }
   
   .p-4 {
@@ -729,3 +729,22 @@ body {
   .flex.flex-wrap.gap-1.bg-gray-100.p-1.rounded-lg button.hover\:bg-gray-200:hover {
     background-color: #DBC8B9;
   }
+  /* Modifier le fond de la modal (remplacer le vert par du blanc) */
+.fixed.inset-0.bg-black.bg-opacity-50 {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+}
+
+/* Style pour encadrer le message de réclamation en vert */
+.modal-message-box {
+  border: 2px solid #294B3B; /* Bordure verte */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(249, 254, 251, 0.2); /* Fond très légèrement teinté */
+  margin-bottom: 1.5rem;
+}
+
+/* S'assurer que le contenu de la modal reste sur fond blanc */
+.fixed.inset-0.bg-black.bg-opacity-50 .bg-white {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(32, 54, 36, 0.1);
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, MessageCircle, Check, X, AlertTriangle, Star, Mail, Download, FileText, FileSpreadsheet, ChevronDown } from 'lucide-react';
+import { Search, Filter, MessageCircle, Check, X, AlertTriangle, Star } from 'lucide-react';
 import './Avies.css'; // Importer le fichier CSS pour le style
 export default function AvisReclamationsApp() {
   // État pour stocker les avis/réclamations
@@ -11,10 +11,6 @@ export default function AvisReclamationsApp() {
   const [replyText, setReplyText] = useState('');
   const [selectedFeedback, setSelectedFeedback] = useState(null);
   const [showReplyModal, setShowReplyModal] = useState(false);
-  const [showEmailModal, setShowEmailModal] = useState(false);
-  const [adminEmail, setAdminEmail] = useState('admin@plateforme.com');
-  const [emailNote, setEmailNote] = useState('');
-  const [showExportDropdown, setShowExportDropdown] = useState(false);
 
   // Simuler le chargement des données
   useEffect(() => {
@@ -29,8 +25,7 @@ export default function AvisReclamationsApp() {
           contenu: 'Très satisfait du service client, réactif et efficace !',
           note: 5,
           status: 'published',
-          replied: false,
-          escalated: false
+          replied: false
         },
         { 
           id: 2, 
@@ -41,8 +36,7 @@ export default function AvisReclamationsApp() {
           contenu: 'Commande non reçue après 15 jours. Je demande un remboursement.',
           status: 'pending',
           urgent: true,
-          replied: false,
-          escalated: false
+          replied: false
         },
         { 
           id: 3, 
@@ -53,8 +47,7 @@ export default function AvisReclamationsApp() {
           contenu: 'Produit de qualité moyenne, ne correspond pas tout à fait à la description.',
           note: 2,
           status: 'published',
-          replied: true,
-          escalated: false
+          replied: true
         },
         { 
           id: 4, 
@@ -65,8 +58,7 @@ export default function AvisReclamationsApp() {
           contenu: 'Article défectueux reçu. Besoin d\'un remplacement rapidement.',
           status: 'resolved',
           urgent: false,
-          replied: true,
-          escalated: true
+          replied: true
         },
         { 
           id: 5, 
@@ -77,8 +69,7 @@ export default function AvisReclamationsApp() {
           contenu: 'Livraison rapide et emballage soigné. Je recommande !',
           note: 4,
           status: 'published',
-          replied: false,
-          escalated: false
+          replied: false
         },
       ];
       
@@ -101,8 +92,6 @@ export default function AvisReclamationsApp() {
       result = result.filter(item => item.status === 'pending');
     } else if (activeTab === 'urgent') {
       result = result.filter(item => item.urgent === true);
-    } else if (activeTab === 'escalated') {
-      result = result.filter(item => item.escalated === true);
     }
     
     // Filtrer par recherche
@@ -132,13 +121,6 @@ export default function AvisReclamationsApp() {
     setShowReplyModal(true);
   };
 
-  // Ouvrir la modal d'envoi à l'admin
-  const openEmailModal = (feedback) => {
-    setSelectedFeedback(feedback);
-    setShowEmailModal(true);
-    setEmailNote('');
-  };
-
   // Envoyer une réponse
   const handleSendReply = () => {
     if (!replyText.trim()) return;
@@ -154,81 +136,6 @@ export default function AvisReclamationsApp() {
     
     // Simuler l'envoi de la réponse (ici on afficherait un toast de succès dans une vraie application)
     alert('Réponse envoyée avec succès !');
-  };
-
-  // Envoyer à l'administrateur
-  const handleSendToAdmin = () => {
-    // Simuler l'envoi d'email à l'administrateur
-    const updatedFeedbacks = feedbacks.map(item => 
-      item.id === selectedFeedback.id ? { ...item, escalated: true } : item
-    );
-    
-    setFeedbacks(updatedFeedbacks);
-    setShowEmailModal(false);
-    setSelectedFeedback(null);
-    
-    // Simuler l'envoi de la réclamation (ici on afficherait un toast de succès dans une vraie application)
-    alert(`Réclamation transférée à ${adminEmail} avec succès !`);
-  };
-
-  // Exporter les données
-  const handleExport = (format) => {
-    // Préparer les données à exporter (utiliser les données filtrées actuellement affichées)
-    const dataToExport = filteredFeedbacks.map(item => {
-      // Simplifier l'objet pour l'export
-      return {
-        type: item.type === 'avis' ? 'Avis' : 'Réclamation',
-        nom: item.nom,
-        email: item.email,
-        date: item.date,
-        contenu: item.contenu,
-        note: item.type === 'avis' ? item.note : 'N/A',
-        status: item.status === 'published' ? 'Publié' : 
-                item.status === 'pending' ? 'En attente' : 'Résolu',
-        urgent: item.urgent ? 'Oui' : 'Non',
-        replied: item.replied ? 'Oui' : 'Non',
-        escalated: item.escalated ? 'Oui' : 'Non'
-      };
-    });
-
-    // Créer différents formats d'export
-    if (format === 'csv') {
-      // Créer CSV
-      const headers = Object.keys(dataToExport[0]).join(',');
-      const csvData = dataToExport.map(row => Object.values(row).join(',')).join('\n');
-      const csvContent = `${headers}\n${csvData}`;
-      
-      // Déclencher le téléchargement
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', `avis-reclamations-${new Date().toISOString().slice(0, 10)}.csv`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } 
-    else if (format === 'json') {
-      // Créer JSON
-      const jsonContent = JSON.stringify(dataToExport, null, 2);
-      
-      // Déclencher le téléchargement
-      const blob = new Blob([jsonContent], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', `avis-reclamations-${new Date().toISOString().slice(0, 10)}.json`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-    else if (format === 'pdf') {
-      // Dans une vraie application, utiliser une bibliothèque comme jsPDF
-      alert('Export PDF : Dans une application réelle, cette fonction générerait un PDF avec les données. Cette fonctionnalité nécessiterait l\'intégration d\'une bibliothèque comme jsPDF.');
-    }
-    
-    // Fermer le dropdown
-    setShowExportDropdown(false);
   };
 
   // Afficher les étoiles pour la note
@@ -258,7 +165,7 @@ export default function AvisReclamationsApp() {
         Consultez, modérez et répondez aux commentaires et réclamations de vos clients.
       </p>
       
-      {/* Onglets, Recherche et Export */}
+      {/* Onglets et Recherche */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
         <div className="flex flex-wrap gap-1 bg-gray-100 p-1 rounded-lg">
           <button 
@@ -291,71 +198,17 @@ export default function AvisReclamationsApp() {
           >
             Urgents
           </button>
-          <button 
-            className={`px-4 py-2 rounded-md ${activeTab === 'escalated' ? 'bg-white shadow text-purple-600' : 'hover:bg-gray-200'}`}
-            onClick={() => setActiveTab('escalated')}
-          >
-            Transférés
-          </button>
         </div>
         
-        <div className="flex gap-2 w-full md:w-auto">
-          <div className="relative w-full md:w-64">
-            <input
-              type="text"
-              placeholder="Rechercher..."
-              className="w-full pl-10 pr-4 py-2 border rounded-lg"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
-          </div>
-          
-          {/* Menu d'export */}
-          <div className="relative">
-            <button 
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center"
-              onClick={() => setShowExportDropdown(!showExportDropdown)}
-            >
-              <Download size={18} className="mr-2" />
-              Exporter
-              <ChevronDown size={16} className="ml-2" />
-            </button>
-            
-            {showExportDropdown && (
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 border">
-                <ul className="py-1">
-                  <li>
-                    <button 
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                      onClick={() => handleExport('csv')}
-                    >
-                      <FileSpreadsheet size={16} className="mr-2" />
-                      Exporter en CSV
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                      onClick={() => handleExport('json')}
-                    >
-                      <FileText size={16} className="mr-2" />
-                      Exporter en JSON
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                      onClick={() => handleExport('pdf')}
-                    >
-                      <FileText size={16} className="mr-2" />
-                      Exporter en PDF
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
+        <div className="relative w-full md:w-64">
+          <input
+            type="text"
+            placeholder="Rechercher..."
+            className="w-full pl-10 pr-4 py-2 border rounded-lg"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
         </div>
       </div>
       
@@ -393,7 +246,7 @@ export default function AvisReclamationsApp() {
                 feedback.status === 'pending' ? 'border-l-4 border-l-yellow-500' : 
                 feedback.status === 'resolved' ? 'border-l-4 border-l-green-500' : 
                 'border-gray-200'
-              } ${feedback.escalated ? 'bg-purple-50' : ''}`}
+              }`}
             >
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -403,12 +256,6 @@ export default function AvisReclamationsApp() {
                       <span className="badge badge-urgent ml-2">
                         <AlertTriangle size={12} className="mr-1" />
                         Urgent
-                      </span>
-                    )}
-                    {feedback.escalated && (
-                      <span className="badge badge-transféré ml-2">
-                        <Mail size={12} className="mr-1" />
-                        Transféré à l'admin
                       </span>
                     )}
                     {feedback.type === 'avis' && (
@@ -468,16 +315,6 @@ export default function AvisReclamationsApp() {
                       Marquer résolu
                     </button>
                   )}
-
-                  {feedback.type === 'reclamation' && !feedback.escalated && (
-                    <button 
-                      className="button button-transférer"
-                      onClick={() => openEmailModal(feedback)}
-                    >
-                      <Mail size={16} className="mr-1" />
-                      Transférer à l'admin
-                    </button>
-                  )}
                 </div>
                 
                 <button 
@@ -526,55 +363,6 @@ export default function AvisReclamationsApp() {
                 disabled={!replyText.trim()}
               >
                 Envoyer la réponse
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Modal de transfert à l'administrateur */}
-      {showEmailModal && selectedFeedback && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-2xl">
-            <h3 className="text-xl font-semibold mb-4">Transférer à l'administrateur</h3>
-            
-            <div className="mb-4 p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-500 mb-2">Réclamation de {selectedFeedback.nom} :</p>
-              <p>{selectedFeedback.contenu}</p>
-            </div>
-            
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email de l'administrateur</label>
-              <input
-                type="email"
-                className="w-full p-3 border rounded-lg"
-                value={adminEmail}
-                onChange={(e) => setAdminEmail(e.target.value)}
-              />
-            </div>
-            
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Note complémentaire (optionnel)</label>
-              <textarea
-                className="w-full p-3 border rounded-lg min-h-24"
-                placeholder="Ajoutez une note pour l'administrateur..."
-                value={emailNote}
-                onChange={(e) => setEmailNote(e.target.value)}
-              ></textarea>
-            </div>
-            
-            <div className="flex justify-end space-x-2">
-              <button 
-                className="px-4 py-2 border rounded-md hover:bg-gray-100"
-                onClick={() => setShowEmailModal(false)}
-              >
-                Annuler
-              </button>
-              <button 
-                className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700"
-                onClick={handleSendToAdmin}
-              >
-                Transférer à l'administrateur
               </button>
             </div>
           </div>
