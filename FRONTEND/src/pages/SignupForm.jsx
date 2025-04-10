@@ -3,6 +3,7 @@ import './SignupForm.css'; // Assurez-vous d'importer le fichier CSS pour le sty
 import logo from '../assets/images/logo1.png';
 import potrerie from '../assets/images/pottery-vases.png';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
+import Layout from '../components/Layout';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,8 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="signup-container">
+<Layout>
+<div className="signup-container">
       <div className="content-wrapper">
         {/* Section gauche avec l'image */}
         <div className="image-section">
@@ -142,6 +144,7 @@ const SignupForm = () => {
         </div>
       </div>
     </div>
+</Layout>
   );
 };
 

@@ -216,7 +216,7 @@
   .login-redirect a:hover {
     text-decoration: underline;
   }
-  
+/*   
   .footer-links {
     display: flex;
     justify-content: center;
@@ -232,7 +232,7 @@
   
   .footer-links a:hover {
     text-decoration: underline;
-  }
+  } */
   /* Image du logo */
 .logo-image {
   width: 100px;

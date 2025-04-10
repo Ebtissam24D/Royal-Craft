@@ -3,6 +3,7 @@ import './Log.css';
 import logo from '../assets/images/logo1.png'; // adapte le chemin selon ton fichier
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import potrerie from '../assets/images/pottery-vases.png';
+import Layout from '../components/Layout';
 
 const Logform = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,8 @@ const Logform = () => {
   };
 
   return (
-    <div className="signup-container">
+ <Layout>
+     <div className="signup-container">
       <div className="content-wrapper">
         <div className="image-section">
           <div className="pottery-image">
@@ -106,6 +108,7 @@ const Logform = () => {
         </div>
       </div>
     </div>
+ </Layout>
   );
 };
 

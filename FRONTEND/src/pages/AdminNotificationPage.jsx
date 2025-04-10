@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Bell, Send, Trash, Filter, Eye, EyeOff, Search, RefreshCw } from 'lucide-react';
 import './NotifPage.css'; // Assurez-vous d'avoir ce fichier CSS pour le style
+import Layout from '../components/Layout';
 export default function AdminNotificationPage() {
   const [notifications, setNotifications] = useState([]);
   const [newNotification, setNewNotification] = useState({
@@ -143,7 +144,8 @@ export default function AdminNotificationPage() {
   };
 
   return (
-    <div className="admin-notification-container">
+   <Layout>
+     <div className="admin-notification-container">
       <header className="notification-header">
         <h1>Gestion des Notifications</h1>
         <div className="action-buttons">
@@ -331,5 +333,6 @@ export default function AdminNotificationPage() {
         )}
       </div>
     </div>
+   </Layout>
   );
 }

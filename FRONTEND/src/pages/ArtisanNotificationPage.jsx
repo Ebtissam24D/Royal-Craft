@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Bell, Check, Clock } from 'lucide-react';
 import'./NotifPage.css'
+import Layout from '../components/Layout';
 
 export default function ArtisanNotificationPage() {
   const [notifications, setNotifications] = useState([]);
@@ -103,7 +104,8 @@ export default function ArtisanNotificationPage() {
   const unreadCount = notifications.filter(n => !n.read).length;
 
   return (
-    <div className="artisan-notification-container">
+   <Layout>
+       <div className="artisan-notification-container">
       <header className="notification-header">
         <h1>Mes Notifications</h1>
         <div className="notification-counter">
@@ -188,5 +190,6 @@ export default function ArtisanNotificationPage() {
         )}
       </div>
     </div>
+   </Layout>
   );
 }

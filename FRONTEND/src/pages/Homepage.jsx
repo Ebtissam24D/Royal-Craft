@@ -17,6 +17,7 @@ import poterie from "../assets/images/poterie2.png";
 import tapis from "../assets/images/tapis1.jpg";
 import B_Card from "../components/B_Card";
 import Card from "../components/Card";
+import Layout from "../components/Layout";
 
 
 
@@ -115,7 +116,7 @@ function HomePage() {
     return time < 10 ? `0${time}` : time
   }
   return (
-    <>
+    <Layout>
       {/* Hero Banner Slideshow */}
       <section className="hero-slideshow">
         {slides.map((slide, index) => (
@@ -471,7 +472,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }
 
